@@ -24,4 +24,12 @@
     return self;
 }
 
+- (void)dealloc{
+    [matchRegex release];
+    [matchTag release];
+    [matchColor release];
+    [matchHighlightColor release];
+    [super dealloc];
+}
+
 @end

@@ -14,8 +14,6 @@
 - (void)buildMatchRuns:(CTFrameRef)frameRef;
 @end
 
-//NSString * const kMXUsernameAttributeName = @"com.mobelux.username_attribute";
-//NSString * const kMXHashtagAttributeName = @"com.mobelux.hashtag_attribute";
 
 @implementation MXMatchLabel
 
@@ -70,9 +68,12 @@
 - (void)dealloc
 {
     [text release];
-    //[usernameRegex release];
-    //[hashtagRegex release];
+    [textColor release];
+    [textFont release];
+    [matchDescriptors release];
     [attributedString release];
+    [matchRuns release];
+    [matchDescriptorTagLookup release];
     [super dealloc];
 }
 
@@ -96,7 +97,6 @@
             CGPoint origins;
             CTFrameGetLineOrigins(aFrameRef, CFRangeMake(i, 1), &origins);
             y = self.bounds.origin.y + self.bounds.size.height - origins.y;
-            NSLog(@"y = %f", y);
             CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
             NSArray *runs = (NSArray *)CTLineGetGlyphRuns(line);
             NSInteger runsCount = [runs count];
@@ -121,7 +121,6 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint touchLocation = [touch locationInView:self];
 	for(NSString *key in [matchRuns allKeys]){
-		//NSLog(@"link = %@", [dict valueForKey:@"TKLinkAttributeName"]);
 		CGRect linkFrame = CGRectFromString(key);
 		if(CGRectContainsPoint(linkFrame, touchLocation)){
             currentRunRect = linkFrame;
@@ -134,10 +133,6 @@
                     highlightColor = [[matchDescriptorTagLookup objectForKey:key] matchHighlightColor];
                 }
             }
-            //highlightedRun = CFRetain(run);
-			//NSDictionary *dict = (NSDictionary *)CTRunGetAttributes(run);
-			//NSLog(@"linkFrame = %@, username = %@ hashtag = %@", key, [dict valueForKey:kMXUsernameAttributeName], [dict valueForKey:kMXHashtagAttributeName]);
-			//CTRunRef run = (CTRunRef)[linkRuns valueForKey:key];
 			CFRange runRange = CTRunGetStringRange(run);
 			NSRange range;
 			NSMutableDictionary *dictionary = [[attributedString attributesAtIndex:runRange.location effectiveRange:&range] mutableCopy];
@@ -145,7 +140,6 @@
 			[dictionary setObject:(id)[highlightColor CGColor] forKey:(NSString *)kCTForegroundColorAttributeName];
 			[attributedString setAttributes:dictionary range:range];
 			[attributedString endEditing];
-			//textLayer.string = attrString;
 			[dictionary release];
             [self setNeedsDisplay];
 			
@@ -178,7 +172,6 @@
 		[attributedString setAttributes:dictionary range:range];
 		[attributedString endEditing];
         currentRunRect = CGRectZero;
-		//textLayer.string = attrString;
 		[self setNeedsDisplay];
 		[dictionary release];
     }
@@ -211,7 +204,6 @@
         [dictionary setObject:(id)matchColor.CGColor forKey:(NSString *)kCTForegroundColorAttributeName];
         [attributedString setAttributes:dictionary range:range];
         [attributedString endEditing];
-        //textLayer.string = attrString;
         [self setNeedsDisplay];
         [dictionary release];
         currentRunRect = CGRectZero;
@@ -267,6 +259,7 @@
                     UIFont *matchFont = [descriptor matchFont];
                     CTFontRef font = CTFontCreateWithName((CFStringRef)matchFont.fontName, matchFont.pointSize, NULL);
                     [attributedString addAttribute:(NSString *)kCTFontAttributeName value:(id)font range:range];
+                    CFRelease(font);
                 }
                 [attributedString addAttribute:[descriptor matchTag] value:[text substringWithRange:range] range:range];
             }
@@ -278,14 +271,14 @@
 
 - (CGFloat)boundingWidthForHeight:(CGFloat)inHeight
 {
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) self); 
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) attributedString); 
     CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(CGFLOAT_MAX, inHeight), NULL);
     CFRelease(framesetter);
     return suggestedSize.width;   
 }
 - (CGFloat)boundingHeightForWidth:(CGFloat)inWidth
 {
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) self); 
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) attributedString); 
     CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(inWidth, CGFLOAT_MAX), NULL);
     CFRelease(framesetter);
     return suggestedSize.height;

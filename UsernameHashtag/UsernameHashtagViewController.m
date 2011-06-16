@@ -64,6 +64,9 @@
     [label addMatchDescriptors:[NSArray arrayWithObjects:usernameDescriptor, hashtagDescriptor, nil]];
     label.delegate = self;
     [self.view addSubview:label];
+    [usernameDescriptor release];
+    [hashtagDescriptor release];
+    [label release];
 }
 
 

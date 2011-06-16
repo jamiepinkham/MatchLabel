@@ -1,0 +1,20 @@
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+*/xcuserdata/*
+
+
+# osx noise
+.DS_Store
+profile
+
+#old school
+.svn
+
+*/project.xcworkspace/*
+*.xcuserdata/*
+
+#Textmate
+*.tmproj

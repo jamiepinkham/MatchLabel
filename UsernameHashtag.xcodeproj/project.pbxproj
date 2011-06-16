@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D01CF6A13AA4CD600B7E0DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CF6913AA4CD600B7E0DC /* UIKit.framework */; };
+		7D01CF6C13AA4CD600B7E0DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CF6B13AA4CD600B7E0DC /* Foundation.framework */; };
+		7D01CF6E13AA4CD600B7E0DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CF6D13AA4CD600B7E0DC /* CoreGraphics.framework */; };
+		7D01CF7413AA4CD600B7E0DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D01CF7213AA4CD600B7E0DC /* InfoPlist.strings */; };
+		7D01CF7713AA4CD600B7E0DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01CF7613AA4CD600B7E0DC /* main.m */; };
+		7D01CF7A13AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01CF7913AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m */; };
+		7D01CF7D13AA4CD600B7E0DC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D01CF7B13AA4CD600B7E0DC /* MainWindow.xib */; };
+		7D01CF8013AA4CD600B7E0DC /* UsernameHashtagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01CF7F13AA4CD600B7E0DC /* UsernameHashtagViewController.m */; };
+		7D01CF8313AA4CD600B7E0DC /* UsernameHashtagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D01CF8113AA4CD600B7E0DC /* UsernameHashtagViewController.xib */; };
+		7D01CF8B13AA508A00B7E0DC /* MXMatchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01CF8A13AA508A00B7E0DC /* MXMatchLabel.m */; };
+		7D01CF8D13AA50A400B7E0DC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CF8C13AA50A400B7E0DC /* CoreText.framework */; };
+		7D16535C13AA7677009ED9E3 /* MXMatchDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D16535B13AA7677009ED9E3 /* MXMatchDescriptor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D01CF6513AA4CD600B7E0DC /* UsernameHashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsernameHashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D01CF6913AA4CD600B7E0DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D01CF6B13AA4CD600B7E0DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D01CF6D13AA4CD600B7E0DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D01CF7113AA4CD600B7E0DC /* UsernameHashtag-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UsernameHashtag-Info.plist"; sourceTree = "<group>"; };
+		7D01CF7313AA4CD600B7E0DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D01CF7513AA4CD600B7E0DC /* UsernameHashtag-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UsernameHashtag-Prefix.pch"; sourceTree = "<group>"; };
+		7D01CF7613AA4CD600B7E0DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D01CF7813AA4CD600B7E0DC /* UsernameHashtagAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsernameHashtagAppDelegate.h; sourceTree = "<group>"; };
+		7D01CF7913AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsernameHashtagAppDelegate.m; sourceTree = "<group>"; };
+		7D01CF7C13AA4CD600B7E0DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7D01CF7E13AA4CD600B7E0DC /* UsernameHashtagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsernameHashtagViewController.h; sourceTree = "<group>"; };
+		7D01CF7F13AA4CD600B7E0DC /* UsernameHashtagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsernameHashtagViewController.m; sourceTree = "<group>"; };
+		7D01CF8213AA4CD600B7E0DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UsernameHashtagViewController.xib; sourceTree = "<group>"; };
+		7D01CF8913AA508A00B7E0DC /* MXMatchLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMatchLabel.h; sourceTree = "<group>"; };
+		7D01CF8A13AA508A00B7E0DC /* MXMatchLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMatchLabel.m; sourceTree = "<group>"; };
+		7D01CF8C13AA50A400B7E0DC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		7D16535A13AA7677009ED9E3 /* MXMatchDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMatchDescriptor.h; path = ../MXMatchDescriptor.h; sourceTree = "<group>"; };
+		7D16535B13AA7677009ED9E3 /* MXMatchDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMatchDescriptor.m; path = ../MXMatchDescriptor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D01CF6213AA4CD600B7E0DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D01CF8D13AA50A400B7E0DC /* CoreText.framework in Frameworks */,
+				7D01CF6A13AA4CD600B7E0DC /* UIKit.framework in Frameworks */,
+				7D01CF6C13AA4CD600B7E0DC /* Foundation.framework in Frameworks */,
+				7D01CF6E13AA4CD600B7E0DC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D01CF5A13AA4CD500B7E0DC = {
+			isa = PBXGroup;
+			children = (
+				7D01CF6F13AA4CD600B7E0DC /* UsernameHashtag */,
+				7D01CF6813AA4CD600B7E0DC /* Frameworks */,
+				7D01CF6613AA4CD600B7E0DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D01CF6613AA4CD600B7E0DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D01CF6513AA4CD600B7E0DC /* UsernameHashtag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D01CF6813AA4CD600B7E0DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D01CF8C13AA50A400B7E0DC /* CoreText.framework */,
+				7D01CF6913AA4CD600B7E0DC /* UIKit.framework */,
+				7D01CF6B13AA4CD600B7E0DC /* Foundation.framework */,
+				7D01CF6D13AA4CD600B7E0DC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D01CF6F13AA4CD600B7E0DC /* UsernameHashtag */ = {
+			isa = PBXGroup;
+			children = (
+				7D01CF7813AA4CD600B7E0DC /* UsernameHashtagAppDelegate.h */,
+				7D01CF7913AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m */,
+				7D01CF7B13AA4CD600B7E0DC /* MainWindow.xib */,
+				7D01CF7E13AA4CD600B7E0DC /* UsernameHashtagViewController.h */,
+				7D01CF7F13AA4CD600B7E0DC /* UsernameHashtagViewController.m */,
+				7D01CF8113AA4CD600B7E0DC /* UsernameHashtagViewController.xib */,
+				7D01CF7013AA4CD600B7E0DC /* Supporting Files */,
+				7D01CF8913AA508A00B7E0DC /* MXMatchLabel.h */,
+				7D01CF8A13AA508A00B7E0DC /* MXMatchLabel.m */,
+				7D16535A13AA7677009ED9E3 /* MXMatchDescriptor.h */,
+				7D16535B13AA7677009ED9E3 /* MXMatchDescriptor.m */,
+			);
+			path = UsernameHashtag;
+			sourceTree = "<group>";
+		};
+		7D01CF7013AA4CD600B7E0DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D01CF7113AA4CD600B7E0DC /* UsernameHashtag-Info.plist */,
+				7D01CF7213AA4CD600B7E0DC /* InfoPlist.strings */,
+				7D01CF7513AA4CD600B7E0DC /* UsernameHashtag-Prefix.pch */,
+				7D01CF7613AA4CD600B7E0DC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D01CF6413AA4CD600B7E0DC /* UsernameHashtag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D01CF8613AA4CD600B7E0DC /* Build configuration list for PBXNativeTarget "UsernameHashtag" */;
+			buildPhases = (
+				7D01CF6113AA4CD600B7E0DC /* Sources */,
+				7D01CF6213AA4CD600B7E0DC /* Frameworks */,
+				7D01CF6313AA4CD600B7E0DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsernameHashtag;
+			productName = UsernameHashtag;
+			productReference = 7D01CF6513AA4CD600B7E0DC /* UsernameHashtag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D01CF5C13AA4CD500B7E0DC /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7D01CF5F13AA4CD500B7E0DC /* Build configuration list for PBXProject "UsernameHashtag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D01CF5A13AA4CD500B7E0DC;
+			productRefGroup = 7D01CF6613AA4CD600B7E0DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D01CF6413AA4CD600B7E0DC /* UsernameHashtag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D01CF6313AA4CD600B7E0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D01CF7413AA4CD600B7E0DC /* InfoPlist.strings in Resources */,
+				7D01CF7D13AA4CD600B7E0DC /* MainWindow.xib in Resources */,
+				7D01CF8313AA4CD600B7E0DC /* UsernameHashtagViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D01CF6113AA4CD600B7E0DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D01CF7713AA4CD600B7E0DC /* main.m in Sources */,
+				7D01CF7A13AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m in Sources */,
+				7D01CF8013AA4CD600B7E0DC /* UsernameHashtagViewController.m in Sources */,
+				7D01CF8B13AA508A00B7E0DC /* MXMatchLabel.m in Sources */,
+				7D16535C13AA7677009ED9E3 /* MXMatchDescriptor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D01CF7213AA4CD600B7E0DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D01CF7313AA4CD600B7E0DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7D01CF7B13AA4CD600B7E0DC /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D01CF7C13AA4CD600B7E0DC /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7D01CF8113AA4CD600B7E0DC /* UsernameHashtagViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D01CF8213AA4CD600B7E0DC /* en */,
+			);
+			name = UsernameHashtagViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D01CF8413AA4CD600B7E0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7D01CF8513AA4CD600B7E0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		7D01CF8713AA4CD600B7E0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UsernameHashtag/UsernameHashtag-Prefix.pch";
+				INFOPLIST_FILE = "UsernameHashtag/UsernameHashtag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7D01CF8813AA4CD600B7E0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UsernameHashtag/UsernameHashtag-Prefix.pch";
+				INFOPLIST_FILE = "UsernameHashtag/UsernameHashtag-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D01CF5F13AA4CD500B7E0DC /* Build configuration list for PBXProject "UsernameHashtag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D01CF8413AA4CD600B7E0DC /* Debug */,
+				7D01CF8513AA4CD600B7E0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D01CF8613AA4CD600B7E0DC /* Build configuration list for PBXNativeTarget "UsernameHashtag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D01CF8713AA4CD600B7E0DC /* Debug */,
+				7D01CF8813AA4CD600B7E0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D01CF5C13AA4CD500B7E0DC /* Project object */;
+}

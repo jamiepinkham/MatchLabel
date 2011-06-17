@@ -7,19 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "RegexKitLite.h"
 
 @interface MXMatchDescriptor : NSObject {
 @private
     
 }
 
-@property (nonatomic, retain) NSRegularExpression *matchRegex;
+@property (nonatomic, copy) NSString *regexPattern;
+@property (nonatomic, assign) RKLRegexOptions regexOptions;
 @property (nonatomic, copy) NSString *matchTag;
 @property (nonatomic, retain) UIColor *matchColor;
 @property (nonatomic, retain) UIColor *matchHighlightColor;
 @property (nonatomic, retain) UIFont *matchFont;
 
-- (id)initWithRegularExpression:(NSRegularExpression *)expression matchTag:(NSString *)matchTag;
+- (id)initWithRegexPattern:(NSString *)pattern regexOption:(RKLRegexOptions)options matchTag:(NSString *)tag;
 
 @end

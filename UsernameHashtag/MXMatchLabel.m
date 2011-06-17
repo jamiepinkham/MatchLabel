@@ -7,6 +7,7 @@
 //
 
 #import "MXMatchLabel.h"
+#import "RegexKitLite.h"
 
 @interface MXMatchLabel()
 - (void)applyMatchDescriptors;
@@ -254,23 +255,18 @@
     [attributedString addAttribute:(NSString *)kCTFontAttributeName value:(id)font range:NSMakeRange(0, [text length])];
     CFRelease(font);
     for(MXMatchDescriptor *descriptor in matchDescriptors){
-        NSRegularExpression *expression = [descriptor matchRegex];
-        NSUInteger numberOfMatches = [expression numberOfMatchesInString:self.text
-                                                                 options:expression.options
-                                                                   range:NSMakeRange(0, [self.text length])];
-        if(numberOfMatches){
-            NSArray *matches = [expression matchesInString:self.text options:NSRegularExpressionCaseInsensitive range:NSMakeRange(0, [self.text length])];
-            for(NSTextCheckingResult *result in matches){
-                NSRange range = result.range;
-                [attributedString addAttribute:(NSString *)kCTForegroundColorAttributeName value:(id)[[descriptor matchColor] CGColor] range:range];
-                if([descriptor matchFont]){
-                    UIFont *matchFont = [descriptor matchFont];
-                    CTFontRef font = CTFontCreateWithName((CFStringRef)matchFont.fontName, matchFont.pointSize, NULL);
-                    [attributedString addAttribute:(NSString *)kCTFontAttributeName value:(id)font range:range];
-                }
-                [attributedString addAttribute:[descriptor matchTag] value:[text substringWithRange:range] range:range];
+        NSString *pattern = [descriptor regexPattern];
+        NSError *error = nil;
+        [self.text enumerateStringsMatchedByRegex:pattern options:descriptor.regexOptions inRange:NSMakeRange(0, [text length]) error:&error enumerationOptions:RKLRegexEnumerationNoOptions usingBlock:^(NSInteger caputureCount, NSString *const *capturedString, const NSRange *capturedRanges, volatile BOOL *const stop){
+            NSRange range = capturedRanges[0];
+            [attributedString addAttribute:(NSString *)kCTForegroundColorAttributeName value:(id)[[descriptor matchColor] CGColor] range:range];
+            if([descriptor matchFont]){
+                UIFont *matchFont = [descriptor matchFont];
+                CTFontRef font = CTFontCreateWithName((CFStringRef)matchFont.fontName, matchFont.pointSize, NULL);
+                [attributedString addAttribute:(NSString *)kCTFontAttributeName value:(id)font range:range];
             }
-        }
+            [attributedString addAttribute:[descriptor matchTag] value:[text substringWithRange:range] range:range];
+        }];
     }
     [self setNeedsDisplay];
 

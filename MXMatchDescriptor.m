@@ -11,12 +11,13 @@
 
 @implementation MXMatchDescriptor
 
-@synthesize matchRegex, matchTag, matchColor, matchHighlightColor, matchFont;
+@synthesize regexPattern, regexOptions,  matchTag, matchColor, matchHighlightColor, matchFont;
 
-- (id)initWithRegularExpression:(NSRegularExpression *)expression matchTag:(NSString *)tag{
+- (id)initWithRegexPattern:(NSString *)pattern regexOption:(RKLRegexOptions)options matchTag:(NSString *)tag{
     self = [super init];
     if(self){
-        self.matchRegex = expression;
+        self.regexPattern = pattern;
+        self.regexOptions = options;
         self.matchTag = tag;
         self.matchColor = [UIColor blueColor];
         self.matchHighlightColor = [UIColor lightGrayColor];

@@ -19,6 +19,8 @@
 		7D01CF8B13AA508A00B7E0DC /* MXMatchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01CF8A13AA508A00B7E0DC /* MXMatchLabel.m */; };
 		7D01CF8D13AA50A400B7E0DC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CF8C13AA50A400B7E0DC /* CoreText.framework */; };
 		7D16535C13AA7677009ED9E3 /* MXMatchDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D16535B13AA7677009ED9E3 /* MXMatchDescriptor.m */; };
+		7D56915913ABA27500908071 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D56915813ABA27500908071 /* libicucore.dylib */; };
+		7D56915D13ABA93800908071 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56915C13ABA93800908071 /* RegexKitLite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		7D01CF8C13AA50A400B7E0DC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7D16535A13AA7677009ED9E3 /* MXMatchDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMatchDescriptor.h; path = ../MXMatchDescriptor.h; sourceTree = "<group>"; };
 		7D16535B13AA7677009ED9E3 /* MXMatchDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMatchDescriptor.m; path = ../MXMatchDescriptor.m; sourceTree = "<group>"; };
+		7D56915813ABA27500908071 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		7D56915B13ABA93800908071 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		7D56915C13ABA93800908071 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D56915913ABA27500908071 /* libicucore.dylib in Frameworks */,
 				7D01CF8D13AA50A400B7E0DC /* CoreText.framework in Frameworks */,
 				7D01CF6A13AA4CD600B7E0DC /* UIKit.framework in Frameworks */,
 				7D01CF6C13AA4CD600B7E0DC /* Foundation.framework in Frameworks */,
@@ -78,6 +84,7 @@
 		7D01CF6813AA4CD600B7E0DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D56915813ABA27500908071 /* libicucore.dylib */,
 				7D01CF8C13AA50A400B7E0DC /* CoreText.framework */,
 				7D01CF6913AA4CD600B7E0DC /* UIKit.framework */,
 				7D01CF6B13AA4CD600B7E0DC /* Foundation.framework */,
@@ -89,6 +96,7 @@
 		7D01CF6F13AA4CD600B7E0DC /* UsernameHashtag */ = {
 			isa = PBXGroup;
 			children = (
+				7D10825913ABA19D00584BB7 /* RegexKitLite */,
 				7D01CF7813AA4CD600B7E0DC /* UsernameHashtagAppDelegate.h */,
 				7D01CF7913AA4CD600B7E0DC /* UsernameHashtagAppDelegate.m */,
 				7D01CF7B13AA4CD600B7E0DC /* MainWindow.xib */,
@@ -113,6 +121,15 @@
 				7D01CF7613AA4CD600B7E0DC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D10825913ABA19D00584BB7 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				7D56915B13ABA93800908071 /* RegexKitLite.h */,
+				7D56915C13ABA93800908071 /* RegexKitLite.m */,
+			);
+			name = RegexKitLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +197,7 @@
 				7D01CF8013AA4CD600B7E0DC /* UsernameHashtagViewController.m in Sources */,
 				7D01CF8B13AA508A00B7E0DC /* MXMatchLabel.m in Sources */,
 				7D16535C13AA7677009ED9E3 /* MXMatchDescriptor.m in Sources */,
+				7D56915D13ABA93800908071 /* RegexKitLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

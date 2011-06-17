@@ -49,14 +49,11 @@
 {
     [super viewDidLoad];
     NSString *pretendTweet = @"Hello @jamiepinkham #hastag jamiepinkham@me.com some#words. This is @jamiepinkham(yay!). This is @jamiepinkham.";
-    NSError *error = nil;
-    NSRegularExpression *usernameRegex = [NSRegularExpression regularExpressionWithPattern:@"(?:\\B)@\\w+" options:NSRegularExpressionCaseInsensitive error:&error];
-    MXMatchDescriptor *usernameDescriptor = [[MXMatchDescriptor alloc] initWithRegularExpression:usernameRegex matchTag:@"username"];
+    MXMatchDescriptor *usernameDescriptor = [[MXMatchDescriptor alloc] initWithRegexPattern:@"(?:\\B)@\\w+" regexOption:RKLCaseless matchTag:@"username"];
     usernameDescriptor.matchColor = [UIColor orangeColor];
     usernameDescriptor.matchHighlightColor = [UIColor purpleColor];
     usernameDescriptor.matchFont = [UIFont italicSystemFontOfSize:21.0];
-    NSRegularExpression *hashtagRegex = [NSRegularExpression regularExpressionWithPattern:@"\\B#\\w*[a-zA-Z]+\\w*" options:NSRegularExpressionCaseInsensitive error:&error];
-    MXMatchDescriptor *hashtagDescriptor = [[MXMatchDescriptor alloc] initWithRegularExpression:hashtagRegex matchTag:@"hashtag"];
+    MXMatchDescriptor *hashtagDescriptor = [[MXMatchDescriptor alloc] initWithRegexPattern:@"\\B#\\w*[a-zA-Z]+\\w*" regexOption:RKLCaseless matchTag:@"hashtag"];
     MXMatchLabel *label = [[MXMatchLabel alloc] initWithFrame:self.view.bounds];
     label.text = pretendTweet;
     label.textFont = [UIFont systemFontOfSize:17.0f];
